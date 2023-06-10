@@ -11,9 +11,10 @@ function App() {
     <AuthProvider>
       <Router>
         <Routes>
+          <Route path='/' element={<Login />}/>
           <Route path="/login" element={<Login />} />
-          <Route path="/dashboard" element={<PrivateRoute element={<Dashboard />} path="/dashboard"/>} />
-          <Route path="/add" element={<PrivateRoute element={<AddTodo />} path="/add"/>} />
+          <Route path="/dashboard" element={<PrivateRoute><Dashboard /></PrivateRoute>} />
+          <Route path="/add" element={<PrivateRoute><AddTodo /></PrivateRoute>} />
         </Routes>
       </Router>
     </AuthProvider>

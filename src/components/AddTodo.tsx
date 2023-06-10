@@ -1,9 +1,11 @@
 import React, { useContext, useState } from 'react';
 import { AuthContext } from './AuthContext';
+import { useNavigate } from 'react-router-dom';
 
 const AddTodo: React.FunctionComponent<any> = () => {
   const { user } = useContext(AuthContext);
   const [title, setTitle] = useState('');
+  const navigate = useNavigate();
 
   const handleAddTodo = () => {
     if (user) {
@@ -16,6 +18,7 @@ const AddTodo: React.FunctionComponent<any> = () => {
       };
       user.todos.push(newTodo);
       setTitle('');
+      navigate('/dashboard')
     }
   };
 
