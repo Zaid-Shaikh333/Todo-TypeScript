@@ -1,0 +1,35 @@
+{
+    "users": [
+      {
+        "username": "user1",
+        "password": "password1",
+        "name": "John Doe",
+        "todos": [
+          {
+            "id": 1,
+            "title": "Task 1",
+            "completed": false,
+            "subTasks": []
+          },
+          {
+            "id": 2,
+            "title": "Task 2",
+            "completed": false,
+            "subTasks": [
+              {
+                "id": 1,
+                "title": "Sub Task 1",
+                "completed": false
+              },
+              {
+                "id": 2,
+                "title": "Sub Task 2",
+                "completed": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+  
