@@ -5,9 +5,10 @@ import usersData from '../mockdata/mock.json';
 
 interface Todo {
   id: number;
+  uuid: string;
   title: string;
   completed: boolean;
-  subTasks: Todo[];
+  subTasks?: Todo[];
 }
 
 interface User {
